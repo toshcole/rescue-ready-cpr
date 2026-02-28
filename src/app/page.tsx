@@ -56,7 +56,25 @@ export default function RescueReadyWebsite() {
         <h2 className="text-3xl font-semibold text-center mb-10">
           Our Training Programs
         </h2>
+        {/* WHERE WE SERVE */}
+        <p className="text-center text-gray-700 max-w-3xl mx-auto mb-8">
+          Serving Fayetteville and surrounding areas. On-site group training available
+          for workplaces, schools, churches, and organizations.
+        </p>
 
+        {/* READY TO SCHEDULE */}
+        <div className="max-w-3xl mx-auto mb-12 bg-gray-50 border rounded-2xl p-6 text-center shadow-sm">
+          <h3 className="text-2xl font-semibold mb-2">Ready to schedule?</h3>
+          <p className="text-gray-700 mb-5">
+            Submit a training request and we’ll respond within 24 hours to confirm availability.
+          </p>
+
+          <a href={bookingLink} target="_blank" rel="noreferrer">
+            <Button className="bg-red-600 text-white hover:bg-red-700">
+              Training Request Form
+            </Button>
+          </a>
+        </div>
         <div className="grid md:grid-cols-3 gap-6">
           <Card className="rounded-2xl shadow">
             <CardContent className="p-6 text-center">
