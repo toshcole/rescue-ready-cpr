@@ -182,8 +182,7 @@ export default function RescueReadyWebsite() {
       </section>
 
       {/* FOOTER */}
-    export default function FooterSection() {
-  return (
+  
     <footer className="bg-black text-white text-center py-6">
       <p className="mb-2">
         Training information provided for educational purposes. In an emergency, call 911.
