@@ -180,7 +180,30 @@ export default function RescueReadyWebsite() {
           </a>
         </div>
       </section>
+{/* TRAINING GALLERY */}
+      <section className="py-16 bg-gray-100 text-center">
+        <h2 className="text-3xl font-bold mb-10">Training in Action</h2>
 
+        <div className="grid md:grid-cols-3 gap-8 px-6">
+          <img
+            src="/training1.jpg"
+            alt="CPR training session"
+            className="rounded-xl shadow-lg w-full h-auto"
+          />
+
+          <img
+            src="/training2.jpg"
+            alt="Hands-on CPR practice"
+            className="rounded-xl shadow-lg w-full h-auto"
+          />
+
+          <img
+            src="/training3.jpg"
+            alt="First aid wound training"
+            className="rounded-xl shadow-lg w-full h-auto"
+          />
+        </div>
+      </section>
           {/* FOOTER */}
       <footer className="bg-black text-white text-center py-6">
         <p className="mb-2">
