@@ -181,14 +181,15 @@ export default function RescueReadyWebsite() {
         </div>
       </section>
 
-      {/* FOOTER */}
-  {/* FOOTER */}
-<footer className="bg-black text-white text-center py-6">
-  <p className="mb-2">
-    Training information provided for educational purposes. In an emergency, call 911.
-  </p>
-  <p>
-    © {new Date().getFullYear()} Rescue Ready CPR & First Aid. All rights reserved.
-  </p>
-</footer>
-  
+          {/* FOOTER */}
+      <footer className="bg-black text-white text-center py-6">
+        <p className="mb-2">
+          Training information provided for educational purposes. In an emergency, call 911.
+        </p>
+        <p>
+          © {new Date().getFullYear()} Rescue Ready CPR & First Aid. All rights reserved.
+        </p>
+      </footer>
+    </div>
+  );
+}
