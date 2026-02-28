@@ -188,19 +188,19 @@ export default function RescueReadyWebsite() {
           <img
             src="/training1.jpg"
             alt="CPR training session"
-            className="rounded-xl shadow-lg w-full h-auto"
+            className="rounded-xl shadow-lg w-full max-w-md mx-auto h-80 object-cover"
           />
 
           <img
             src="/training2.jpg"
             alt="Hands-on CPR practice"
-            className="rounded-xl shadow-lg w-full h-auto"
+            className="rounded-xl shadow-lg w-full max-w-md mx-auto h-80 object-cover"
           />
 
           <img
             src="/training3.jpg"
             alt="First aid wound training"
-            className="rounded-xl shadow-lg w-full h-auto"
+            className="rounded-xl shadow-lg w-full max-w-md mx-auto h-80 object-cover"
           />
         </div>
       </section>
