@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Rescue Ready CPR",
-  description: "CPR and First Aid Certification Training",
+  description: "CPR/BLS Training",
 };
 
 export default function RootLayout({
@@ -26,13 +26,29 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <nav className="flex justify-between items-center px-6 py-4 shadow-md">
-          <h1 className="font-bold text-lg">Rescue Ready CPR</h1>
-          <div className="space-x-6">
-            <Link href="/" className="hover:text-red-600">Home</Link>
-            <Link href="/pricing" className="hover:text-red-600">Pricing</Link>
+        {/* Top Nav */}
+        <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b">
+          <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <Link href="/" className="font-bold text-gray-900 text-lg">
+              Rescue Ready CPR
+            </Link>
+
+            <nav className="flex items-center gap-6 text-sm font-medium text-gray-700">
+              <Link href="/#training" className="hover:text-gray-900">
+                Training
+              </Link>
+              <Link href="/pricing" className="hover:text-gray-900">
+                Pricing
+              </Link>
+              <Link
+                href="/#book"
+                className="inline-flex items-center rounded-xl bg-gray-900 px-4 py-2 text-white hover:bg-gray-800"
+              >
+                Book a Class
+              </Link>
+            </nav>
           </div>
-        </nav>
+        </header>
 
         {children}
       </body>
