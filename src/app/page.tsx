@@ -245,6 +245,37 @@ export default function HomePage() {
           </p>
         </div>
       </section>
+      {/* SECURE YOUR SPOT */}
+      <section id="pay" className="py-16 px-6 bg-red-600 text-white">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl font-semibold">Secure Your Spot</h2>
+
+          <p className="mt-4 text-lg max-w-2xl mx-auto">
+            Ready to lock in your training date? Secure your spot with payment
+            and receive confirmation details within 24 hours.
+          </p>
+
+          <div className="mt-8 bg-white text-gray-900 rounded-2xl p-8 shadow-lg">
+            <h3 className="text-xl font-semibold">
+              Online Payment Coming Soon
+            </h3>
+
+            <p className="mt-3 text-gray-700">
+              We are currently setting up secure online payment options.
+              Submit a Training Request Form and we will provide payment
+              instructions directly.
+            </p>
+
+            <div className="mt-6">
+              <a href={bookingLink} target="_blank" rel="noreferrer">
+                <button className="inline-flex items-center rounded-xl bg-black px-6 py-3 text-white font-medium hover:bg-gray-800">
+                  Submit Training Request
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 {/* FAQ */}
       <section id="faq" className="py-16 px-6 bg-white border-t">
         <div className="max-w-5xl mx-auto">
