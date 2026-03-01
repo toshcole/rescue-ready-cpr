@@ -209,7 +209,7 @@ export default function HomePage() {
             CPR/BLS Training • Community Ready • Professional Instruction
           </p>
           <p className="mt-4 text-xs text-white/60">
-            © {new Date().getFullYear()} Rescue Ready CPR. All rights reserved.
+             {new Date().getFullYear()} Rescue Ready CPR. All rights reserved.
           </p>
         </div>
       </footer>
