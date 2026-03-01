@@ -184,12 +184,14 @@ export default function RescueReadyWebsite() {
       <section className="py-16 bg-gray-100 text-center">
         <h2 className="text-3xl font-bold mb-10">Training in Action</h2>
 
-        <div className="grid md:grid-cols-3 gap-8 px-6">
-          <img
-            src="/training1.jpg"
-            alt="CPR training session"
-            className="rounded-xl shadow-lg w-full max-w-md mx-auto h-80 object-cover"
-          />
+        <div className="relative w-full h-[400px] md:h-[500px]">
+  <Image
+    src="/training1.jpg"
+    alt="CPR Training"
+    fill
+    className="object-contain rounded-xl"
+  />
+</div>
 
           <img
             src="/training2.jpg"
