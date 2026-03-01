@@ -37,9 +37,11 @@ export default function RootLayout({
               <Link href="/#training" className="hover:text-gray-900">
                 Training
               </Link>
+
               <Link href="/pricing" className="hover:text-gray-900">
                 Pricing
               </Link>
+
               <Link
                 href="/#book"
                 className="inline-flex items-center rounded-xl bg-gray-900 px-4 py-2 text-white hover:bg-gray-800"
