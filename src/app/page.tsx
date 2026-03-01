@@ -193,13 +193,21 @@ export default function HomePage() {
               </p>
               {/* Replace with Boris’ business email/phone if you want it on the site */}
               <p className="mt-2">
-                <span className="font-semibold text-gray-800">Contact:</span>{" "}
-                rescueredycpr@gmail.com • (910) 574-3536
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+  <span className="font-semibold text-gray-800">Contact:</span>{" "}
+  <a
+    href="mailto:rescueredycpr@gmail.com"
+    className="hover:underline"
+  >
+    rescueredycpr@gmail.com
+  </a>
+  {" • "}
+  <a
+    href="tel:19105743536"
+    className="hover:underline"
+  >
+    (910) 574-3536
+  </a>
+</p>
 
       {/* FOOTER */}
       <footer className="bg-gray-900 text-white text-center py-10">
