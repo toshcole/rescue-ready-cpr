@@ -1,220 +1,220 @@
-import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import {
-  Phone,
-  Mail,
-  HeartPulse,
-  ShieldCheck,
-  Users,
-  PawPrint,
-  AlertTriangle,
-  Droplet,
-} from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
 
-export default function RescueReadyWebsite() {
-  const phone = "910-574-3536";
-  const email = "rescueredycpr@gmail.com";
-
-  // TEMP booking link (we’ll replace with Google Form link later)
-  const bookingLink = "https://forms.gle/4uaGwidx2i6nYnZb9";
-
+export default function HomePage() {
   return (
-    <div className="min-h-screen bg-white text-gray-800">
+    <main className="bg-white text-gray-900">
       {/* HERO */}
-      <section className="bg-red-600 text-white py-16 px-6 text-center">
-        <div className="flex justify-center mb-6">
-  <img
-    src="/rescuereadylogo.png"
-    alt="Rescue Ready Logo"
-    className="h-32 md:h-40 object-contain bg-white p-2 rounded shadow-md"
-  />
-</div>
-        <h1 className="text-4xl font-bold mb-4">Rescue Ready CPR & First Aid</h1>
-        <p className="text-lg max-w-2xl mx-auto">
-          Life-saving skills. Real-world confidence. Training individuals, schools,
-          and organizations to respond when every second counts.
-        </p>
+      <section className="px-6 pt-14 pb-12">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+            <div>
+              <p className="text-sm font-semibold text-gray-600">
+                CPR / BLS Training • Community Ready
+              </p>
 
-        <div className="mt-6 flex justify-center gap-4 flex-wrap">
-          <a href={bookingLink}>
-            <Button className="bg-black text-white hover:bg-gray-900">
-              Book a Class
-            </Button>
-          </a>
+              <h1 className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl">
+                Rescue Ready CPR
+              </h1>
 
-          <a href="#contact">
-            <Button className="bg-white text-red-600 hover:bg-gray-100">
-              Contact Us
-            </Button>
-          </a>
+              <p className="mt-4 text-lg text-gray-700 leading-relaxed">
+                Professional, hands-on CPR & BLS training designed to build real confidence.
+                We focus on clarity, practice, and making sure you leave ready.
+              </p>
+
+              <div className="mt-7 flex flex-wrap gap-3">
+                <Link
+                  href="/pricing"
+                  className="inline-flex items-center rounded-xl bg-gray-900 px-5 py-3 text-white font-medium hover:bg-gray-800"
+                >
+                  View Pricing
+                </Link>
+
+                <Link
+                  href="/#book"
+                  className="inline-flex items-center rounded-xl border border-gray-300 px-5 py-3 font-medium text-gray-900 hover:bg-gray-50"
+                >
+                  Book a Class
+                </Link>
+              </div>
+
+              <div className="mt-6 text-sm text-gray-600">
+                <p>
+                  <span className="font-semibold text-gray-800">Serving:</span>{" "}
+                  Individuals • Groups • Workplace Teams
+                </p>
+              </div>
+            </div>
+
+            {/* Right side hero image / placeholder */}
+            <div className="rounded-2xl border bg-gray-50 p-4 shadow-sm">
+              <div className="relative overflow-hidden rounded-2xl">
+                <Image
+                  src="/training2.jpg"
+                  alt="CPR training session"
+                  width={1200}
+                  height={800}
+                  className="h-[320px] w-full object-cover sm:h-[380px]"
+                  priority
+                />
+              </div>
+
+              <div className="mt-4 grid gap-2 sm:grid-cols-3">
+                <div className="rounded-xl border bg-white p-3 text-center">
+                  <p className="text-xs text-gray-600">Hands-On Practice</p>
+                  <p className="mt-1 text-sm font-semibold">Real Confidence</p>
+                </div>
+                <div className="rounded-xl border bg-white p-3 text-center">
+                  <p className="text-xs text-gray-600">Clear Instruction</p>
+                  <p className="mt-1 text-sm font-semibold">Easy to Follow</p>
+                </div>
+                <div className="rounded-xl border bg-white p-3 text-center">
+                  <p className="text-xs text-gray-600">Group Friendly</p>
+                  <p className="mt-1 text-sm font-semibold">Teams Welcome</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* SERVICES */}
-      <section className="py-16 px-6 max-w-6xl mx-auto">
-        <h2 className="text-3xl font-semibold text-center mb-10">
-          Our Training Programs
-        </h2>
-        {/* WHERE WE SERVE */}
-        <p className="text-center text-gray-700 max-w-3xl mx-auto mb-8">
-          Serving Fayetteville and surrounding areas. On-site group training available
-          for workplaces, schools, churches, and organizations.
-        </p>
+      {/* TRAINING SHOWCASE */}
+      <section id="training" className="px-6 py-14 bg-gray-50 border-t">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex items-end justify-between gap-6 flex-wrap">
+            <div>
+              <h2 className="text-3xl font-bold tracking-tight">Training Showcase</h2>
+              <p className="mt-2 text-gray-700 max-w-2xl">
+                A look into our training environment — focused, hands-on, and supportive.
+              </p>
+            </div>
 
-        {/* READY TO SCHEDULE */}
-        <div className="max-w-3xl mx-auto mb-12 bg-gray-50 border rounded-2xl p-6 text-center shadow-sm">
-          <h3 className="text-2xl font-semibold mb-2">Ready to schedule?</h3>
-          <p className="text-gray-700 mb-5">
-            Submit a training request and we’ll respond within 24 hours to confirm availability.
+            <Link
+              href="/pricing"
+              className="inline-flex items-center rounded-xl bg-white px-4 py-2 text-sm font-semibold text-gray-900 border hover:bg-gray-100"
+            >
+              See Pricing →
+            </Link>
+          </div>
+
+          {/* Corporate grid: 2 per row on desktop, 1 per row on mobile */}
+          <div className="mt-8 grid gap-6 sm:grid-cols-2">
+            {/* Card 1 */}
+            <figure className="overflow-hidden rounded-2xl bg-white border shadow-sm">
+              <div className="relative">
+                <Image
+                  src="/training1.jpg"
+                  alt="CPR practice and technique guidance"
+                  width={1400}
+                  height={900}
+                  className="h-[320px] w-full object-cover sm:h-[360px]"
+                />
+              </div>
+              <figcaption className="p-4">
+                <p className="font-semibold">Technique & Coaching</p>
+                <p className="mt-1 text-sm text-gray-600">
+                  Step-by-step guidance while students practice in real time.
+                </p>
+              </figcaption>
+            </figure>
+
+            {/* Card 2 */}
+            <figure className="overflow-hidden rounded-2xl bg-white border shadow-sm">
+              <div className="relative">
+                <Image
+                  src="/training2.jpg"
+                  alt="CPR training session with multiple stations"
+                  width={1400}
+                  height={900}
+                  className="h-[320px] w-full object-cover sm:h-[360px]"
+                />
+              </div>
+              <figcaption className="p-4">
+                <p className="font-semibold">Group Practice Stations</p>
+                <p className="mt-1 text-sm text-gray-600">
+                  Teams rotate through stations to build skill and speed.
+                </p>
+              </figcaption>
+            </figure>
+
+            {/* Card 3 (full width on desktop for balance) */}
+            <figure className="overflow-hidden rounded-2xl bg-white border shadow-sm sm:col-span-2">
+              <div className="relative">
+                <Image
+                  src="/training3.jpg"
+                  alt="Wound care training close-up"
+                  width={1600}
+                  height={900}
+                  className="h-[320px] w-full object-cover sm:h-[420px]"
+                />
+              </div>
+              <figcaption className="p-4">
+                <p className="font-semibold">Skills That Translate</p>
+                <p className="mt-1 text-sm text-gray-600">
+                  Practical training details that make a difference when it matters.
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      {/* BOOK A CLASS */}
+      <section id="book" className="px-6 py-14">
+        <div className="max-w-6xl mx-auto">
+          <div className="rounded-2xl border bg-white shadow-sm p-8">
+            <h2 className="text-3xl font-bold tracking-tight">Book a Class</h2>
+            <p className="mt-2 text-gray-700 max-w-2xl">
+              Ready to schedule training? Submit the request form and we’ll follow up with availability.
+            </p>
+
+            <div className="mt-6 flex flex-wrap gap-3">
+              {/* Replace this link with your real Google Form link */}
+              <a
+                href="PASTE_YOUR_GOOGLE_FORM_LINK_HERE"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center rounded-xl bg-gray-900 px-5 py-3 text-white font-medium hover:bg-gray-800"
+              >
+                Open Booking Form
+              </a>
+
+              <Link
+                href="/pricing"
+                className="inline-flex items-center rounded-xl border border-gray-300 px-5 py-3 font-medium text-gray-900 hover:bg-gray-50"
+              >
+                View Pricing
+              </Link>
+            </div>
+
+            <div className="mt-6 text-sm text-gray-600">
+              <p>
+                Prefer to talk first? Email us with your group size, location, and preferred dates.
+              </p>
+              {/* Replace with Boris’ business email/phone if you want it on the site */}
+              <p className="mt-2">
+                <span className="font-semibold text-gray-800">Contact:</span>{" "}
+                your@email.com • (000) 000-0000
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="bg-gray-900 text-white text-center py-10">
+        <div className="max-w-6xl mx-auto px-6">
+          <p className="font-semibold">Rescue Ready CPR</p>
+          <p className="mt-2 text-sm text-white/80">
+            CPR/BLS Training • Community Ready • Professional Instruction
           </p>
-
-          <a href={bookingLink} target="_blank" rel="noreferrer">
-            <Button className="bg-red-600 text-white hover:bg-red-700">
-              Training Request Form
-            </Button>
-          </a>
-        </div>
-        <div className="grid md:grid-cols-3 gap-6">
-          <Card className="rounded-2xl shadow">
-            <CardContent className="p-6 text-center">
-              <HeartPulse className="mx-auto mb-3" size={36} />
-              <h3 className="font-semibold text-xl mb-2">CPR & BLS Certification</h3>
-              <p>
-                Professional-level training aligned with current guidelines for
-                healthcare providers, students, and workplaces.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="rounded-2xl shadow">
-            <CardContent className="p-6 text-center">
-              <ShieldCheck className="mx-auto mb-3" size={36} />
-              <h3 className="font-semibold text-xl mb-2">First Aid Training</h3>
-              <p>
-                Learn to respond to injuries, illness, and emergencies with calm,
-                confident action.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="rounded-2xl shadow">
-            <CardContent className="p-6 text-center">
-              <Users className="mx-auto mb-3" size={36} />
-              <h3 className="font-semibold text-xl mb-2">Group & On-Site Training</h3>
-              <p>
-                We bring hands-on training directly to your workplace, school,
-                church, or organization.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="rounded-2xl shadow">
-            <CardContent className="p-6 text-center">
-              <PawPrint className="mx-auto mb-3" size={36} />
-              <h3 className="font-semibold text-xl mb-2">Pet CPR & First Aid</h3>
-              <p>
-                Because pets are family. Learn how to respond to choking, injury,
-                and emergencies involving dogs and cats.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="rounded-2xl shadow">
-            <CardContent className="p-6 text-center">
-              <AlertTriangle className="mx-auto mb-3" size={36} />
-              <h3 className="font-semibold text-xl mb-2">Disaster Preparedness</h3>
-              <p>
-                Prepare your family, workplace, or organization for severe weather,
-                crises, and unexpected emergencies.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="rounded-2xl shadow">
-            <CardContent className="p-6 text-center">
-              <Droplet className="mx-auto mb-3" size={36} />
-              <h3 className="font-semibold text-xl mb-2">Stop The Bleed® Training</h3>
-              <p>
-                Life-saving bleeding control skills anyone can use before EMS
-                arrives.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
-      {/* ABOUT */}
-      <section className="bg-gray-100 py-16 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-semibold mb-6">Why Choose Rescue Ready?</h2>
-          <p className="text-lg leading-relaxed">
-            Rescue Ready CPR & First Aid is built on one mission: making life-saving
-            training accessible, practical, and confidence-building. Our courses are
-            engaging, hands-on, and designed to prepare people for real situations —
-            not just pass a class.
+          <p className="mt-4 text-xs text-white/60">
+            © {new Date().getFullYear()} Rescue Ready CPR. All rights reserved.
           </p>
         </div>
-      </section>
-
-      {/* CONTACT */}
-      <section id="contact" className="py-16 px-6 text-center">
-        <h2 className="text-3xl font-semibold mb-6">Get Certified. Be Ready.</h2>
-        <p className="mb-6">
-          Call or email us today to schedule a class or group training.
-        </p>
-
-        <div className="flex flex-col md:flex-row justify-center gap-6">
-          <a
-            className="flex items-center justify-center gap-2 underline"
-            href={`tel:${phone}`}
-          >
-            <Phone /> <span>{phone}</span>
-          </a>
-
-          <a
-            className="flex items-center justify-center gap-2 underline"
-            href={`mailto:${email}`}
-          >
-            <Mail /> <span>{email}</span>
-          </a>
-        </div>
-      </section>
-{/* TRAINING GALLERY */}
-      <section className="py-16 bg-gray-100 text-center">
-        <h2 className="text-3xl font-bold mb-10">Training in Action</h2>
-
-        <div className="relative w-full h-[400px] md:h-[500px]">
-  <Image
-    src="/training1.jpg"
-    alt="CPR Training"
-    fill
-    className="object-contain rounded-xl"
-  />
-</div>
-
-          <img
-            src="/training2.jpg"
-            alt="Hands-on CPR practice"
-            className="rounded-xl shadow-lg w-full max-w-md mx-auto h-80 object-cover"
-          />
-
-          <img
-            src="/training3.jpg"
-            alt="First aid wound training"
-            className="rounded-xl shadow-lg w-full max-w-md mx-auto h-80 object-cover"
-          />
-        </div>
-      </section>
-          {/* FOOTER */}
-      <footer className="bg-black text-white text-center py-6">
-        <p className="mb-2">
-          Training information provided for educational purposes. In an emergency, call 911.
-        </p>
-        <p>
-          © {new Date().getFullYear()} Rescue Ready CPR & First Aid. All rights reserved.
-        </p>
       </footer>
-    </div>
+    </main>
   );
 }
+
+
