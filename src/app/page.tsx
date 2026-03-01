@@ -167,17 +167,14 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="mt-10 grid gap-6 sm:grid-cols-2">
-            {/* Photo 1 */}
-            <figure className="overflow-hidden rounded-2xl bg-white border shadow-sm">
-              <div className="relative h-[320px] sm:h-[360px]">
-                <Image
-                  src="/training1.jpg"
-                  alt="CPR practice and technique guidance"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+         <div className="relative w-full aspect-[3/4] bg-black/5">
+  <Image
+    src="/training1.jpg"
+    alt="CPR practice and technique guidance"
+    fill
+    className="object-cover object-top"
+  />
+</div>
               <figcaption className="p-4">
                 <p className="font-semibold">Technique & Coaching</p>
                 <p className="mt-1 text-sm text-gray-600">
