@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
@@ -155,6 +156,83 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* TRAINING PHOTOS */}
+      <section className="bg-gray-50 border-t py-16 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center">
+            <h2 className="text-3xl font-semibold">Training Photos</h2>
+            <p className="mt-2 text-gray-700 max-w-2xl mx-auto">
+              A look into our hands-on training environment — supportive, practical,
+              and focused on real-world readiness.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-6 sm:grid-cols-2">
+            {/* Photo 1 */}
+            <figure className="overflow-hidden rounded-2xl bg-white border shadow-sm">
+              <div className="relative h-[320px] sm:h-[360px]">
+                <Image
+                  src="/training1.jpg"
+                  alt="CPR practice and technique guidance"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <figcaption className="p-4">
+                <p className="font-semibold">Technique & Coaching</p>
+                <p className="mt-1 text-sm text-gray-600">
+                  Step-by-step guidance while students practice in real time.
+                </p>
+              </figcaption>
+            </figure>
+
+            {/* Photo 2 */}
+            <figure className="overflow-hidden rounded-2xl bg-white border shadow-sm">
+              <div className="relative h-[320px] sm:h-[360px]">
+                <Image
+                  src="/training2.jpg"
+                  alt="CPR training session with multiple stations"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <figcaption className="p-4">
+                <p className="font-semibold">Group Practice Stations</p>
+                <p className="mt-1 text-sm text-gray-600">
+                  Teams rotate through stations to build skill and confidence.
+                </p>
+              </figcaption>
+            </figure>
+
+            {/* Photo 3 (full width on desktop) */}
+            <figure className="overflow-hidden rounded-2xl bg-white border shadow-sm sm:col-span-2">
+              <div className="relative h-[320px] sm:h-[420px]">
+                <Image
+                  src="/training3.jpg"
+                  alt="First aid and wound care training close-up"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <figcaption className="p-4">
+                <p className="font-semibold">Skills That Translate</p>
+                <p className="mt-1 text-sm text-gray-600">
+                  Practical training details that make a difference when it matters.
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div className="mt-10 text-center">
+            <a href={bookingLink} target="_blank" rel="noreferrer">
+              <Button className="bg-red-600 text-white hover:bg-red-700">
+                Request Training
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* ABOUT */}
       <section className="bg-gray-100 py-16 px-6">
         <div className="max-w-4xl mx-auto text-center">
@@ -176,11 +254,17 @@ export default function HomePage() {
         </p>
 
         <div className="flex flex-col md:flex-row justify-center gap-6">
-          <a className="flex items-center justify-center gap-2 underline" href={`tel:${phone}`}>
+          <a
+            className="flex items-center justify-center gap-2 underline"
+            href={`tel:${phone}`}
+          >
             <Phone /> <span>{phone}</span>
           </a>
 
-          <a className="flex items-center justify-center gap-2 underline" href={`mailto:${email}`}>
+          <a
+            className="flex items-center justify-center gap-2 underline"
+            href={`mailto:${email}`}
+          >
             <Mail /> <span>{email}</span>
           </a>
         </div>
@@ -200,4 +284,3 @@ export default function HomePage() {
     </div>
   );
 }
-
