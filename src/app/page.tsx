@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -17,13 +16,13 @@ export default function HomePage() {
   const phone = "910-574-3536";
   const email = "rescueredycpr@gmail.com";
 
-  // Booking link (Google Form)
+  // ✅ Use a plain URL (NOT markdown)
   const bookingLink = "https://forms.gle/4uaGwidx2i6nYnZb9";
 
   return (
-    <div className="min-h-screen bg-white text-gray-800">
+    <div className="min-h-screen bg-white text-gray-800 w-full">
       {/* HERO */}
-      <section className="bg-red-600 text-white py-16 px-6 text-center">
+      <section className="w-full bg-red-600 text-white py-16 px-6 text-center">
         <div className="flex justify-center mb-6">
           <img
             src="/rescuereadylogo.png"
@@ -71,7 +70,6 @@ export default function HomePage() {
             Submit a training request and we’ll respond within 24 hours to confirm
             availability.
           </p>
-
           <a href={bookingLink} target="_blank" rel="noreferrer">
             <Button className="bg-red-600 text-white hover:bg-red-700">
               Training Request Form
@@ -83,9 +81,7 @@ export default function HomePage() {
           <Card className="rounded-2xl shadow">
             <CardContent className="p-6 text-center">
               <HeartPulse className="mx-auto mb-3" size={36} />
-              <h3 className="font-semibold text-xl mb-2">
-                CPR & BLS Certification
-              </h3>
+              <h3 className="font-semibold text-xl mb-2">CPR & BLS Certification</h3>
               <p>
                 Professional-level training aligned with current guidelines for
                 healthcare providers, students, and workplaces.
@@ -107,9 +103,7 @@ export default function HomePage() {
           <Card className="rounded-2xl shadow">
             <CardContent className="p-6 text-center">
               <Users className="mx-auto mb-3" size={36} />
-              <h3 className="font-semibold text-xl mb-2">
-                Group & On-Site Training
-              </h3>
+              <h3 className="font-semibold text-xl mb-2">Group & On-Site Training</h3>
               <p>
                 We bring hands-on training directly to your workplace, school,
                 church, or organization.
@@ -131,9 +125,7 @@ export default function HomePage() {
           <Card className="rounded-2xl shadow">
             <CardContent className="p-6 text-center">
               <AlertTriangle className="mx-auto mb-3" size={36} />
-              <h3 className="font-semibold text-xl mb-2">
-                Disaster Preparedness
-              </h3>
+              <h3 className="font-semibold text-xl mb-2">Disaster Preparedness</h3>
               <p>
                 Prepare your family, workplace, or organization for severe weather,
                 crises, and unexpected emergencies.
@@ -144,9 +136,7 @@ export default function HomePage() {
           <Card className="rounded-2xl shadow">
             <CardContent className="p-6 text-center">
               <Droplet className="mx-auto mb-3" size={36} />
-              <h3 className="font-semibold text-xl mb-2">
-                Stop The Bleed® Training
-              </h3>
+              <h3 className="font-semibold text-xl mb-2">Stop The Bleed® Training</h3>
               <p>
                 Life-saving bleeding control skills anyone can use before EMS
                 arrives.
@@ -157,7 +147,7 @@ export default function HomePage() {
       </section>
 
       {/* TRAINING PHOTOS */}
-<section id="training" className="bg-gray-50 border-t py-16 px-6">
+      <section id="training" className="bg-gray-50 border-t py-16 px-6 w-full">
         <div className="max-w-6xl mx-auto">
           <div className="text-center">
             <h2 className="text-3xl font-semibold">Training Photos</h2>
@@ -167,14 +157,19 @@ export default function HomePage() {
             </p>
           </div>
 
-         <div className="relative w-full aspect-[3/4] bg-black/5">
-  <Image
-    src="/training1.jpg"
-    alt="CPR practice and technique guidance"
-    fill
-    className="object-cover object-top"
-  />
-</div>
+          {/* ✅ Grid wrapper was missing before */}
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            {/* Photo 1 */}
+            <figure className="overflow-hidden rounded-2xl bg-white border shadow-sm">
+              {/* ✅ Portrait-friendly + keeps faces from cutting off */}
+              <div className="relative w-full aspect-[3/4] bg-black/5">
+                <Image
+                  src="/training1.jpg"
+                  alt="CPR practice and technique guidance"
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
               <figcaption className="p-4">
                 <p className="font-semibold">Technique & Coaching</p>
                 <p className="mt-1 text-sm text-gray-600">
@@ -185,13 +180,13 @@ export default function HomePage() {
 
             {/* Photo 2 */}
             <figure className="overflow-hidden rounded-2xl bg-white border shadow-sm">
-              <div className="relative h-[320px] sm:h-[360px]">
-               <Image
-  src="/training1.jpg"
-  alt="CPR practice and technique guidance"
-  fill
-  className="object-cover object-top"
-/>
+              <div className="relative w-full aspect-[3/4] bg-black/5">
+                <Image
+                  src="/training2.jpg"
+                  alt="Group practice stations during CPR training"
+                  fill
+                  className="object-cover object-top"
+                />
               </div>
               <figcaption className="p-4">
                 <p className="font-semibold">Group Practice Stations</p>
@@ -202,13 +197,13 @@ export default function HomePage() {
             </figure>
 
             {/* Photo 3 (full width on desktop) */}
-            <figure className="overflow-hidden rounded-2xl bg-white border shadow-sm sm:col-span-2">
-              <div className="relative h-[320px] sm:h-[420px]">
+            <figure className="overflow-hidden rounded-2xl bg-white border shadow-sm md:col-span-2">
+              <div className="relative h-[320px] sm:h-[420px] bg-black/5">
                 <Image
                   src="/training3.jpg"
                   alt="First aid and wound care training close-up"
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                 />
               </div>
               <figcaption className="p-4">
@@ -231,7 +226,7 @@ export default function HomePage() {
       </section>
 
       {/* ABOUT */}
-      <section className="bg-gray-100 py-16 px-6">
+      <section className="bg-gray-100 py-16 px-6 w-full">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-semibold mb-6">Why Choose Rescue Ready?</h2>
           <p className="text-lg leading-relaxed">
@@ -242,25 +237,21 @@ export default function HomePage() {
           </p>
         </div>
       </section>
+
       {/* SECURE YOUR SPOT */}
-      <section id="pay" className="py-16 px-6 bg-red-600 text-white">
+      <section id="pay" className="py-16 px-6 bg-red-600 text-white w-full">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl font-semibold">Secure Your Spot</h2>
-
           <p className="mt-4 text-lg max-w-2xl mx-auto">
-            Ready to lock in your training date? Secure your spot with payment
-            and receive confirmation details within 24 hours.
+            Ready to lock in your training date? Secure your spot with payment and
+            receive confirmation details within 24 hours.
           </p>
 
           <div className="mt-8 bg-white text-gray-900 rounded-2xl p-8 shadow-lg">
-            <h3 className="text-xl font-semibold">
-              Online Payment Coming Soon
-            </h3>
-
+            <h3 className="text-xl font-semibold">Online Payment Coming Soon</h3>
             <p className="mt-3 text-gray-700">
-              We are currently setting up secure online payment options.
-              Submit a Training Request Form and we will provide payment
-              instructions directly.
+              We are currently setting up secure online payment options. Submit a
+              Training Request Form and we will provide payment instructions directly.
             </p>
 
             <div className="mt-6">
@@ -273,8 +264,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-{/* FAQ */}
-      <section id="faq" className="py-16 px-6 bg-white border-t">
+
+      {/* FAQ */}
+      <section id="faq" className="py-16 px-6 bg-white border-t w-full">
         <div className="max-w-5xl mx-auto">
           <div className="text-center">
             <h2 className="text-3xl font-semibold">FAQ</h2>
@@ -342,40 +334,29 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
       {/* CONTACT */}
-      <section id="contact" className="py-16 px-6 text-center">
+      <section id="contact" className="py-16 px-6 text-center w-full">
         <h2 className="text-3xl font-semibold mb-6">Get Certified. Be Ready.</h2>
-        <p className="mb-6">
-          Call or email us today to schedule a class or group training.
-        </p>
+        <p className="mb-6">Call or email us today to schedule a class or group training.</p>
 
         <div className="flex flex-col md:flex-row justify-center gap-6">
-          <a
-            className="flex items-center justify-center gap-2 underline"
-            href={`tel:${phone}`}
-          >
+          <a className="flex items-center justify-center gap-2 underline" href={`tel:${phone}`}>
             <Phone /> <span>{phone}</span>
           </a>
 
-          <a
-            className="flex items-center justify-center gap-2 underline"
-            href={`mailto:${email}`}
-          >
+          <a className="flex items-center justify-center gap-2 underline" href={`mailto:${email}`}>
             <Mail /> <span>{email}</span>
           </a>
         </div>
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-black text-white text-center py-6">
+      <footer className="bg-black text-white text-center py-6 w-full">
         <p className="mb-2">
-          Training information provided for educational purposes. In an emergency,
-          call 911.
+          Training information provided for educational purposes. In an emergency, call 911.
         </p>
-        <p>
-          © {new Date().getFullYear()} Rescue Ready CPR & First Aid. All rights
-          reserved.
-        </p>
+        <p>© {new Date().getFullYear()} Rescue Ready CPR & First Aid. All rights reserved.</p>
       </footer>
     </div>
   );
