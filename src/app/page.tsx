@@ -194,7 +194,7 @@ export default function HomePage() {
               {/* Replace with Boris’ business email/phone if you want it on the site */}
               <p className="mt-2">
                 <span className="font-semibold text-gray-800">Contact:</span>{" "}
-                your@email.com • (000) 000-0000
+                rescueredycpr@gmail.com • (910) 574-3536
               </p>
             </div>
           </div>
