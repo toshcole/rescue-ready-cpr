@@ -189,12 +189,12 @@ export default function HomePage() {
             {/* Photo 2 */}
             <figure className="overflow-hidden rounded-2xl bg-white border shadow-sm">
               <div className="relative h-[320px] sm:h-[360px]">
-                <Image
-                  src="/training2.jpg"
-                  alt="CPR training session with multiple stations"
-                  fill
-                  className="object-cover"
-                />
+               <Image
+  src="/training1.jpg"
+  alt="CPR practice and technique guidance"
+  fill
+  className="object-cover object-top"
+/>
               </div>
               <figcaption className="p-4">
                 <p className="font-semibold">Group Practice Stations</p>
