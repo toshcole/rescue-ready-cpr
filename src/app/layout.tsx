@@ -46,12 +46,12 @@ export default function RootLayout({
                 Pricing
               </Link>
 
-              <Link
-                href="/#book"
-                className="inline-flex items-center rounded-xl bg-gray-900 px-4 py-2 text-white hover:bg-gray-800"
-              >
-                Book a Class
-              </Link>
+             <Link
+  href="/#book"
+  className="inline-flex items-center rounded-xl bg-gray-900 px-4 py-2 text-white hover:bg-gray-800 whitespace-nowrap"
+>
+  Book a Class
+</Link>
             </nav>
           </div>
         </header>
