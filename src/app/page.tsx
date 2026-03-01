@@ -196,24 +196,24 @@ export default function HomePage() {
               </figcaption>
             </figure>
 
-            {/* Photo 3 (full width on desktop) */}
-            <figure className="overflow-hidden rounded-2xl bg-white border shadow-sm md:col-span-2">
-              <div className="relative h-[320px] sm:h-[420px] bg-black/5">
-                <Image
-                  src="/training3.jpg"
-                  alt="First aid and wound care training close-up"
-                  fill
-                  className="object-cover object-top"
-                />
-              </div>
-              <figcaption className="p-4">
-                <p className="font-semibold">Skills That Translate</p>
-                <p className="mt-1 text-sm text-gray-600">
-                  Practical training details that make a difference when it matters.
-                </p>
-              </figcaption>
-            </figure>
-          </div>
+            {/* Photo 3 (same fixed size as others) */}
+<figure className="overflow-hidden rounded-2xl bg-white border shadow-sm">
+  <div className="relative w-full aspect-[3/4] bg-black/5">
+    <Image
+      src="/training3.jpg"
+      alt="First aid and wound care training close-up"
+      fill
+      className="object-cover object-top"
+    />
+  </div>
+  <figcaption className="p-4">
+    <p className="font-semibold">Skills That Translate</p>
+    <p className="mt-1 text-sm text-gray-600">
+      Practical training details that make a difference when it matters.
+    </p>
+  </figcaption>
+</figure>
+          
 
           <div className="mt-10 text-center">
             <a href={bookingLink} target="_blank" rel="noreferrer">
