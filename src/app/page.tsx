@@ -245,7 +245,75 @@ export default function HomePage() {
           </p>
         </div>
       </section>
+{/* FAQ */}
+      <section id="faq" className="py-16 px-6 bg-white border-t">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center">
+            <h2 className="text-3xl font-semibold">FAQ</h2>
+            <p className="mt-2 text-gray-700 max-w-2xl mx-auto">
+              Quick answers to the most common questions. If you don’t see your question here,
+              reach out anytime.
+            </p>
+          </div>
 
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <div className="rounded-2xl border bg-gray-50 p-6 shadow-sm">
+              <h3 className="font-semibold text-lg">How do I book a class?</h3>
+              <p className="mt-2 text-gray-700">
+                Click <span className="font-semibold">Book a Class</span> and complete the Training Request Form.
+                We’ll confirm availability within 24 hours.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border bg-gray-50 p-6 shadow-sm">
+              <h3 className="font-semibold text-lg">Do you offer group or on-site training?</h3>
+              <p className="mt-2 text-gray-700">
+                Yes. We can travel to workplaces, schools, churches, and organizations for group training.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border bg-gray-50 p-6 shadow-sm">
+              <h3 className="font-semibold text-lg">How long are classes?</h3>
+              <p className="mt-2 text-gray-700">
+                Class length varies by course type and group size. After you submit the request form,
+                we’ll confirm the estimated time and what to expect.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border bg-gray-50 p-6 shadow-sm">
+              <h3 className="font-semibold text-lg">Where do you provide training?</h3>
+              <p className="mt-2 text-gray-700">
+                We serve Fayetteville and surrounding areas. On-site options are available depending on
+                location and scheduling.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border bg-gray-50 p-6 shadow-sm">
+              <h3 className="font-semibold text-lg">What should I bring?</h3>
+              <p className="mt-2 text-gray-700">
+                Just bring yourself and be ready to practice hands-on skills. If anything else is needed
+                for your session, we’ll let you know when confirming.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border bg-gray-50 p-6 shadow-sm">
+              <h3 className="font-semibold text-lg">Can I pay online?</h3>
+              <p className="mt-2 text-gray-700">
+                Online payment is coming soon. For now, submit the Training Request Form and we’ll reply
+                with next steps and payment options.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-10 text-center">
+            <a href={bookingLink} target="_blank" rel="noreferrer">
+              <Button className="bg-red-600 text-white hover:bg-red-700">
+                Submit Training Request
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
       {/* CONTACT */}
       <section id="contact" className="py-16 px-6 text-center">
         <h2 className="text-3xl font-semibold mb-6">Get Certified. Be Ready.</h2>
