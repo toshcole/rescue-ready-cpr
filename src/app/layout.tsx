@@ -38,6 +38,9 @@ export default function RootLayout({
                 Training
               </Link>
               <Link href="/pricing" className="hover:text-gray-900">
+                <a href="/#faq" className="hover:underline">
+  FAQ
+</a>
                 Pricing
               </Link>
               <Link
