@@ -146,6 +146,154 @@ export default function HomePage() {
         </div>
       </section>
 
+      import Image from "next/image";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import {
+  Phone,
+  Mail,
+  HeartPulse,
+  ShieldCheck,
+  Users,
+  PawPrint,
+  AlertTriangle,
+  Droplet,
+} from "lucide-react";
+
+export default function HomePage() {
+  const phone = "910-574-3536";
+  const email = "rescueredycpr@gmail.com";
+
+  // ✅ Use a plain URL (NOT markdown)
+  const bookingLink = "https://forms.gle/4uaGwidx2i6nYnZb9";
+
+  return (
+    <div className="min-h-screen bg-white text-gray-800 w-full">
+      {/* HERO */}
+      <section className="w-full bg-red-600 text-white py-16 px-6 text-center">
+        <div className="flex justify-center mb-6">
+          <img
+            src="/rescuereadylogo.png"
+            alt="Rescue Ready Logo"
+            className="h-32 md:h-40 object-contain bg-white p-2 rounded shadow-md"
+          />
+        </div>
+
+        <h1 className="text-4xl font-bold mb-4">Rescue Ready CPR & First Aid</h1>
+
+        <p className="text-lg max-w-2xl mx-auto">
+          Life-saving skills. Real-world confidence. Training individuals, schools,
+          and organizations to respond when every second counts.
+        </p>
+
+        <div className="mt-6 flex justify-center gap-4 flex-wrap">
+          <a href={bookingLink} target="_blank" rel="noreferrer">
+            <Button className="bg-black text-white hover:bg-gray-900">
+              Book a Class
+            </Button>
+          </a>
+
+          <a href="#contact">
+            <Button className="bg-white text-red-600 hover:bg-gray-100">
+              Contact Us
+            </Button>
+          </a>
+        </div>
+      </section>
+
+      {/* SERVICES */}
+      <section className="py-16 px-6 max-w-6xl mx-auto">
+        <h2 className="text-3xl font-semibold text-center mb-10">
+          Our Training Programs
+        </h2>
+
+        <p className="text-center text-gray-700 max-w-3xl mx-auto mb-8">
+          Serving Fayetteville and surrounding areas. On-site group training available
+          for workplaces, schools, churches, and organizations.
+        </p>
+
+        <div className="max-w-3xl mx-auto mb-12 bg-gray-50 border rounded-2xl p-6 text-center shadow-sm">
+          <h3 className="text-2xl font-semibold mb-2">Ready to schedule?</h3>
+          <p className="text-gray-700 mb-5">
+            Submit a training request and we’ll respond within 24 hours to confirm
+            availability.
+          </p>
+          <a href={bookingLink} target="_blank" rel="noreferrer">
+            <Button className="bg-red-600 text-white hover:bg-red-700">
+              Training Request Form
+            </Button>
+          </a>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          <Card className="rounded-2xl shadow">
+            <CardContent className="p-6 text-center">
+              <HeartPulse className="mx-auto mb-3" size={36} />
+              <h3 className="font-semibold text-xl mb-2">CPR & BLS Certification</h3>
+              <p>
+                Professional-level training aligned with current guidelines for
+                healthcare providers, students, and workplaces.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="rounded-2xl shadow">
+            <CardContent className="p-6 text-center">
+              <ShieldCheck className="mx-auto mb-3" size={36} />
+              <h3 className="font-semibold text-xl mb-2">First Aid Training</h3>
+              <p>
+                Learn to respond to injuries, illness, and emergencies with calm,
+                confident action.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="rounded-2xl shadow">
+            <CardContent className="p-6 text-center">
+              <Users className="mx-auto mb-3" size={36} />
+              <h3 className="font-semibold text-xl mb-2">Group & On-Site Training</h3>
+              <p>
+                We bring hands-on training directly to your workplace, school,
+                church, or organization.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="rounded-2xl shadow">
+            <CardContent className="p-6 text-center">
+              <PawPrint className="mx-auto mb-3" size={36} />
+              <h3 className="font-semibold text-xl mb-2">Pet CPR & First Aid</h3>
+              <p>
+                Because pets are family. Learn how to respond to choking, injury,
+                and emergencies involving dogs and cats.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="rounded-2xl shadow">
+            <CardContent className="p-6 text-center">
+              <AlertTriangle className="mx-auto mb-3" size={36} />
+              <h3 className="font-semibold text-xl mb-2">Disaster Preparedness</h3>
+              <p>
+                Prepare your family, workplace, or organization for severe weather,
+                crises, and unexpected emergencies.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="rounded-2xl shadow">
+            <CardContent className="p-6 text-center">
+              <Droplet className="mx-auto mb-3" size={36} />
+              <h3 className="font-semibold text-xl mb-2">Stop The Bleed® Training</h3>
+              <p>
+                Life-saving bleeding control skills anyone can use before EMS
+                arrives.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
       {/* TRAINING PHOTOS */}
       <section id="training" className="bg-gray-50 border-t py-16 px-6 w-full">
         <div className="max-w-6xl mx-auto">
@@ -225,6 +373,142 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ABOUT */}
+      <section className="bg-gray-100 py-16 px-6 w-full">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-semibold mb-6">Why Choose Rescue Ready?</h2>
+          <p className="text-lg leading-relaxed">
+            Rescue Ready CPR & First Aid is built on one mission: making life-saving
+            training accessible, practical, and confidence-building. Our courses are
+            engaging, hands-on, and designed to prepare people for real situations —
+            not just pass a class.
+          </p>
+        </div>
+      </section>
+
+      {/* SECURE YOUR SPOT */}
+      <section id="pay" className="py-16 px-6 bg-red-600 text-white w-full">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl font-semibold">Secure Your Spot</h2>
+          <p className="mt-4 text-lg max-w-2xl mx-auto">
+            Ready to lock in your training date? Secure your spot with payment and
+            receive confirmation details within 24 hours.
+          </p>
+
+          <div className="mt-8 bg-white text-gray-900 rounded-2xl p-8 shadow-lg">
+            <h3 className="text-xl font-semibold">Online Payment Coming Soon</h3>
+            <p className="mt-3 text-gray-700">
+              We are currently setting up secure online payment options. Submit a
+              Training Request Form and we will provide payment instructions directly.
+            </p>
+
+            <div className="mt-6">
+              <a href={bookingLink} target="_blank" rel="noreferrer">
+                <button className="inline-flex items-center rounded-xl bg-black px-6 py-3 text-white font-medium hover:bg-gray-800">
+                  Submit Training Request
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section id="faq" className="py-16 px-6 bg-white border-t w-full">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center">
+            <h2 className="text-3xl font-semibold">FAQ</h2>
+            <p className="mt-2 text-gray-700 max-w-2xl mx-auto">
+              Quick answers to the most common questions. If you don’t see your question here,
+              reach out anytime.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <div className="rounded-2xl border bg-gray-50 p-6 shadow-sm">
+              <h3 className="font-semibold text-lg">How do I book a class?</h3>
+              <p className="mt-2 text-gray-700">
+                Click <span className="font-semibold">Book a Class</span> and complete the Training Request Form.
+                We’ll confirm availability within 24 hours.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border bg-gray-50 p-6 shadow-sm">
+              <h3 className="font-semibold text-lg">Do you offer group or on-site training?</h3>
+              <p className="mt-2 text-gray-700">
+                Yes. We can travel to workplaces, schools, churches, and organizations for group training.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border bg-gray-50 p-6 shadow-sm">
+              <h3 className="font-semibold text-lg">How long are classes?</h3>
+              <p className="mt-2 text-gray-700">
+                Class length varies by course type and group size. After you submit the request form,
+                we’ll confirm the estimated time and what to expect.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border bg-gray-50 p-6 shadow-sm">
+              <h3 className="font-semibold text-lg">Where do you provide training?</h3>
+              <p className="mt-2 text-gray-700">
+                We serve Fayetteville and surrounding areas. On-site options are available depending on
+                location and scheduling.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border bg-gray-50 p-6 shadow-sm">
+              <h3 className="font-semibold text-lg">What should I bring?</h3>
+              <p className="mt-2 text-gray-700">
+                Just bring yourself and be ready to practice hands-on skills. If anything else is needed
+                for your session, we’ll let you know when confirming.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border bg-gray-50 p-6 shadow-sm">
+              <h3 className="font-semibold text-lg">Can I pay online?</h3>
+              <p className="mt-2 text-gray-700">
+                Online payment is coming soon. For now, submit the Training Request Form and we’ll reply
+                with next steps and payment options.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-10 text-center">
+            <a href={bookingLink} target="_blank" rel="noreferrer">
+              <Button className="bg-red-600 text-white hover:bg-red-700">
+                Submit Training Request
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section id="contact" className="py-16 px-6 text-center w-full">
+        <h2 className="text-3xl font-semibold mb-6">Get Certified. Be Ready.</h2>
+        <p className="mb-6">Call or email us today to schedule a class or group training.</p>
+
+        <div className="flex flex-col md:flex-row justify-center gap-6">
+          <a className="flex items-center justify-center gap-2 underline" href={`tel:${phone}`}>
+            <Phone /> <span>{phone}</span>
+          </a>
+
+          <a className="flex items-center justify-center gap-2 underline" href={`mailto:${email}`}>
+            <Mail /> <span>{email}</span>
+          </a>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="bg-black text-white text-center py-6 w-full">
+        <p className="mb-2">
+          Training information provided for educational purposes. In an emergency, call 911.
+        </p>
+        <p>© {new Date().getFullYear()} Rescue Ready CPR & First Aid. All rights reserved.</p>
+      </footer>
+    </div>
+  );
+}
       {/* ABOUT */}
       <section className="bg-gray-100 py-16 px-6 w-full">
         <div className="max-w-4xl mx-auto text-center">
