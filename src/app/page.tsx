@@ -186,7 +186,9 @@ export default function HomePage() {
             </p>
           </div>
 
+          {/* ✅ All 3 photos are the SAME size now */}
           <div className="mt-10 grid gap-6 md:grid-cols-2">
+            {/* Photo 1 */}
             <figure className="overflow-hidden rounded-2xl bg-white border shadow-sm">
               <div className="relative w-full aspect-[3/4] bg-black/5">
                 <Image
@@ -205,6 +207,7 @@ export default function HomePage() {
               </figcaption>
             </figure>
 
+            {/* Photo 2 */}
             <figure className="overflow-hidden rounded-2xl bg-white border shadow-sm">
               <div className="relative w-full aspect-[3/4] bg-black/5">
                 <Image
@@ -223,13 +226,14 @@ export default function HomePage() {
               </figcaption>
             </figure>
 
-            <figure className="overflow-hidden rounded-2xl bg-white border shadow-sm md:col-span-2">
-              <div className="relative w-full aspect-[16/9] bg-black/5">
+            {/* Photo 3 ✅ SAME size as the others */}
+            <figure className="overflow-hidden rounded-2xl bg-white border shadow-sm">
+              <div className="relative w-full aspect-[3/4] bg-black/5">
                 <Image
                   src="/training3.jpg"
                   alt="First aid and wound care training close-up"
                   fill
-                  sizes="100vw"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover object-top"
                 />
               </div>
