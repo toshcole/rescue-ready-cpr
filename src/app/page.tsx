@@ -10,6 +10,7 @@ import {
   PawPrint,
   AlertTriangle,
   Droplet,
+  Biohazard,
 } from "lucide-react";
 
 export default function HomePage() {
@@ -48,6 +49,12 @@ export default function HomePage() {
           <a href="#contact">
             <Button className="bg-white text-red-600 hover:bg-gray-100">
               Contact Us
+            </Button>
+          </a>
+
+          <a href="/pricing">
+            <Button className="bg-white/10 text-white border border-white/30 hover:bg-white/20">
+              View Pricing
             </Button>
           </a>
         </div>
@@ -151,6 +158,20 @@ export default function HomePage() {
               </p>
             </CardContent>
           </Card>
+
+          {/* ✅ NEW COURSE CARD */}
+          <Card className="rounded-2xl shadow">
+            <CardContent className="p-6 text-center">
+              <Biohazard className="mx-auto mb-3" size={36} />
+              <h3 className="font-semibold text-xl mb-2">
+                Bloodborne & Airborne Pathogens
+              </h3>
+              <p>
+                Safety-focused training to reduce exposure risks and support
+                workplace compliance. <span className="font-semibold">$35</span>
+              </p>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
@@ -166,13 +187,13 @@ export default function HomePage() {
           </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-2">
-            {/* Photo 1 */}
             <figure className="overflow-hidden rounded-2xl bg-white border shadow-sm">
               <div className="relative w-full aspect-[3/4] bg-black/5">
                 <Image
                   src="/training1.jpg"
                   alt="CPR practice and technique guidance"
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover object-top"
                 />
               </div>
@@ -184,13 +205,13 @@ export default function HomePage() {
               </figcaption>
             </figure>
 
-            {/* Photo 2 */}
             <figure className="overflow-hidden rounded-2xl bg-white border shadow-sm">
               <div className="relative w-full aspect-[3/4] bg-black/5">
                 <Image
                   src="/training2.jpg"
                   alt="Group practice stations during CPR training"
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover object-top"
                 />
               </div>
@@ -202,13 +223,13 @@ export default function HomePage() {
               </figcaption>
             </figure>
 
-            {/* Photo 3 (kept same size as the others) */}
-            <figure className="overflow-hidden rounded-2xl bg-white border shadow-sm">
-              <div className="relative w-full aspect-[3/4] bg-black/5">
+            <figure className="overflow-hidden rounded-2xl bg-white border shadow-sm md:col-span-2">
+              <div className="relative w-full aspect-[16/9] bg-black/5">
                 <Image
                   src="/training3.jpg"
                   alt="First aid and wound care training close-up"
                   fill
+                  sizes="100vw"
                   className="object-cover object-top"
                 />
               </div>
@@ -333,6 +354,17 @@ export default function HomePage() {
               <p className="mt-2 text-gray-700">
                 Online payment is coming soon. For now, submit the Training Request
                 Form and we’ll reply with next steps and payment options.
+              </p>
+            </div>
+
+            {/* ✅ OPTIONAL: New FAQ for Pathogens */}
+            <div className="rounded-2xl border bg-gray-50 p-6 shadow-sm md:col-span-2">
+              <h3 className="font-semibold text-lg">
+                Do you offer Bloodborne & Airborne Pathogens training?
+              </h3>
+              <p className="mt-2 text-gray-700">
+                Yes. This course is available for individuals and workplaces and is priced at{" "}
+                <span className="font-semibold">$35</span>. Submit the request form and we’ll confirm scheduling.
               </p>
             </div>
           </div>
