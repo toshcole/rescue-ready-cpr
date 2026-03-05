@@ -51,6 +51,17 @@ export default function PricingPage() {
           </ul>
         </section>
 
+        {/* Bloodborne & Airborne Pathogens */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-semibold mb-4">
+            Bloodborne & Airborne Pathogens
+          </h2>
+          <ul className="space-y-2">
+            <li>Individual Training – $35</li>
+            <li>Group / Workplace Training – Available Upon Request</li>
+          </ul>
+        </section>
+
         {/* Disaster Preparedness */}
         <section className="mb-12">
           <h2 className="text-2xl font-semibold mb-4">Disaster Preparedness</h2>
@@ -63,18 +74,25 @@ export default function PricingPage() {
 
         {/* On-Site Training */}
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4">On-Site Corporate Training</h2>
+          <h2 className="text-2xl font-semibold mb-4">
+            On-Site Corporate Training
+          </h2>
           <ul className="space-y-2">
             <li>1–10 Participants – Starting at $700</li>
             <li>11–20 Participants – Starting at $1,200</li>
             <li>20+ Participants – Custom Pricing</li>
-            <li>Includes instruction, equipment, certification cards, and digital roster tracking</li>
+            <li>
+              Includes instruction, equipment, certification cards, and digital
+              roster tracking
+            </li>
           </ul>
         </section>
 
         {/* Recertification Special */}
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4">Recertification Special</h2>
+          <h2 className="text-2xl font-semibold mb-4">
+            Recertification Special
+          </h2>
           <p>Returning Students – $10 off any renewal course</p>
         </section>
 
