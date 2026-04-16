@@ -17,8 +17,11 @@ export default function HomePage() {
   const phone = "910-574-3536";
   const email = "rescueredycpr@gmail.com";
 
-  // ✅ Use a plain URL (NOT markdown)
+  // Training request form
   const bookingLink = "https://forms.gle/4uaGwidx2i6nYnZb9";
+
+  // Stripe payment link for BLS class
+  const stripeBlsLink = "https://buy.stripe.com/6oU00jg3AfZ4agl8wDcIE00";
 
   return (
     <div className="min-h-screen bg-white text-gray-800 w-full">
@@ -46,9 +49,9 @@ export default function HomePage() {
             </Button>
           </a>
 
-          <a href="#contact">
+          <a href={stripeBlsLink} target="_blank" rel="noreferrer">
             <Button className="bg-white text-red-600 hover:bg-gray-100">
-              Contact Us
+              Pay for BLS Class
             </Button>
           </a>
 
@@ -77,11 +80,18 @@ export default function HomePage() {
             Submit a training request and we’ll respond within 24 hours to confirm
             availability.
           </p>
-          <a href={bookingLink} target="_blank" rel="noreferrer">
-            <Button className="bg-red-600 text-white hover:bg-red-700">
-              Training Request Form
-            </Button>
-          </a>
+          <div className="flex justify-center gap-4 flex-wrap">
+            <a href={bookingLink} target="_blank" rel="noreferrer">
+              <Button className="bg-red-600 text-white hover:bg-red-700">
+                Training Request Form
+              </Button>
+            </a>
+            <a href={stripeBlsLink} target="_blank" rel="noreferrer">
+              <Button className="bg-black text-white hover:bg-gray-800">
+                Pay for BLS Class
+              </Button>
+            </a>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
@@ -159,7 +169,6 @@ export default function HomePage() {
             </CardContent>
           </Card>
 
-          {/* ✅ NEW COURSE CARD */}
           <Card className="rounded-2xl shadow">
             <CardContent className="p-6 text-center">
               <Biohazard className="mx-auto mb-3" size={36} />
@@ -186,9 +195,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          {/* ✅ All 3 photos are the SAME size now */}
           <div className="mt-10 grid gap-6 md:grid-cols-2">
-            {/* Photo 1 */}
             <figure className="overflow-hidden rounded-2xl bg-white border shadow-sm">
               <div className="relative w-full aspect-[3/4] bg-black/5">
                 <Image
@@ -207,7 +214,6 @@ export default function HomePage() {
               </figcaption>
             </figure>
 
-            {/* Photo 2 */}
             <figure className="overflow-hidden rounded-2xl bg-white border shadow-sm">
               <div className="relative w-full aspect-[3/4] bg-black/5">
                 <Image
@@ -226,7 +232,6 @@ export default function HomePage() {
               </figcaption>
             </figure>
 
-            {/* Photo 3 ✅ SAME size as the others */}
             <figure className="overflow-hidden rounded-2xl bg-white border shadow-sm">
               <div className="relative w-full aspect-[3/4] bg-black/5">
                 <Image
@@ -247,11 +252,18 @@ export default function HomePage() {
           </div>
 
           <div className="mt-10 text-center">
-            <a href={bookingLink} target="_blank" rel="noreferrer">
-              <Button className="bg-red-600 text-white hover:bg-red-700">
-                Request Training
-              </Button>
-            </a>
+            <div className="flex justify-center gap-4 flex-wrap">
+              <a href={bookingLink} target="_blank" rel="noreferrer">
+                <Button className="bg-red-600 text-white hover:bg-red-700">
+                  Request Training
+                </Button>
+              </a>
+              <a href={stripeBlsLink} target="_blank" rel="noreferrer">
+                <Button className="bg-black text-white hover:bg-gray-800">
+                  Pay for BLS Class
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -274,23 +286,41 @@ export default function HomePage() {
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl font-semibold">Secure Your Spot</h2>
           <p className="mt-4 text-lg max-w-2xl mx-auto">
-            Ready to lock in your training date? Secure your spot with payment and
-            receive confirmation details within 24 hours.
+            Ready to lock in your training date? You can pay online now for the BLS
+            class or submit a training request for group and custom bookings.
           </p>
 
-          <div className="mt-8 bg-white text-gray-900 rounded-2xl p-8 shadow-lg">
-            <h3 className="text-xl font-semibold">Online Payment Coming Soon</h3>
-            <p className="mt-3 text-gray-700">
-              We are currently setting up secure online payment options. Submit a
-              Training Request Form and we will provide payment instructions directly.
-            </p>
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            <div className="bg-white text-gray-900 rounded-2xl p-8 shadow-lg">
+              <h3 className="text-xl font-semibold">BLS Class – $85</h3>
+              <p className="mt-3 text-gray-700">
+                Secure your BLS class payment online and reserve your spot quickly and
+                easily.
+              </p>
 
-            <div className="mt-6">
-              <a href={bookingLink} target="_blank" rel="noreferrer">
-                <button className="inline-flex items-center rounded-xl bg-black px-6 py-3 text-white font-medium hover:bg-gray-800">
-                  Submit Training Request
-                </button>
-              </a>
+              <div className="mt-6">
+                <a href={stripeBlsLink} target="_blank" rel="noreferrer">
+                  <button className="inline-flex items-center rounded-xl bg-black px-6 py-3 text-white font-medium hover:bg-gray-800">
+                    Pay for BLS Class
+                  </button>
+                </a>
+              </div>
+            </div>
+
+            <div className="bg-white text-gray-900 rounded-2xl p-8 shadow-lg">
+              <h3 className="text-xl font-semibold">Group & Custom Training</h3>
+              <p className="mt-3 text-gray-700">
+                Need training for a workplace, school, church, daycare, gym, or
+                organization? Submit a request and we’ll confirm details directly.
+              </p>
+
+              <div className="mt-6">
+                <a href={bookingLink} target="_blank" rel="noreferrer">
+                  <button className="inline-flex items-center rounded-xl bg-red-600 px-6 py-3 text-white font-medium hover:bg-red-700">
+                    Submit Training Request
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -356,12 +386,12 @@ export default function HomePage() {
             <div className="rounded-2xl border bg-gray-50 p-6 shadow-sm">
               <h3 className="font-semibold text-lg">Can I pay online?</h3>
               <p className="mt-2 text-gray-700">
-                Online payment is coming soon. For now, submit the Training Request
-                Form and we’ll reply with next steps and payment options.
+                Yes. Online payment is now available for the BLS class. For group
+                training and custom requests, submit the Training Request Form and
+                we’ll follow up with next steps.
               </p>
             </div>
 
-            {/* ✅ OPTIONAL: New FAQ for Pathogens */}
             <div className="rounded-2xl border bg-gray-50 p-6 shadow-sm md:col-span-2">
               <h3 className="font-semibold text-lg">
                 Do you offer Bloodborne & Airborne Pathogens training?
@@ -374,11 +404,18 @@ export default function HomePage() {
           </div>
 
           <div className="mt-10 text-center">
-            <a href={bookingLink} target="_blank" rel="noreferrer">
-              <Button className="bg-red-600 text-white hover:bg-red-700">
-                Submit Training Request
-              </Button>
-            </a>
+            <div className="flex justify-center gap-4 flex-wrap">
+              <a href={bookingLink} target="_blank" rel="noreferrer">
+                <Button className="bg-red-600 text-white hover:bg-red-700">
+                  Submit Training Request
+                </Button>
+              </a>
+              <a href={stripeBlsLink} target="_blank" rel="noreferrer">
+                <Button className="bg-black text-white hover:bg-gray-800">
+                  Pay for BLS Class
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -387,10 +424,10 @@ export default function HomePage() {
       <section id="contact" className="py-16 px-6 text-center w-full">
         <h2 className="text-3xl font-semibold mb-6">Get Certified. Be Ready.</h2>
         <p className="mb-6">
-          Call or email us today to schedule a class or group training.
+          Call, email, or secure your BLS class online today.
         </p>
 
-        <div className="flex flex-col md:flex-row justify-center gap-6">
+        <div className="flex flex-col md:flex-row justify-center gap-6 mb-6">
           <a
             className="flex items-center justify-center gap-2 underline"
             href={`tel:${phone}`}
@@ -405,6 +442,12 @@ export default function HomePage() {
             <Mail /> <span>{email}</span>
           </a>
         </div>
+
+        <a href={stripeBlsLink} target="_blank" rel="noreferrer">
+          <Button className="bg-red-600 text-white hover:bg-red-700">
+            Pay for BLS Class – $85
+          </Button>
+        </a>
       </section>
 
       {/* FOOTER */}
