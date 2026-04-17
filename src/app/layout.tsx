@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rescue Ready CPR",
+  title: "Rescue Ready CPR & First Aid",
   description: "CPR/BLS Training",
 };
 
@@ -32,27 +32,27 @@ export default function RootLayout({
             {/* Brand */}
             <Link
               href="/"
-              className="font-bold text-gray-900 text-base sm:text-lg leading-tight whitespace-nowrap"
+              className="font-bold text-red-600 text-base sm:text-lg leading-tight whitespace-nowrap"
             >
-              Rescue Ready CPR
+              Rescue Ready CPR & First Aid
             </Link>
 
             {/* Desktop Nav */}
-            <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-700">
-              <Link href="/#training" className="hover:text-gray-900">
+            <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-800">
+              <Link href="/#training" className="hover:text-red-600">
                 Training
               </Link>
 
-              <Link href="/#faq" className="hover:text-gray-900">
+              <Link href="/#faq" className="hover:text-red-600">
                 FAQ
               </Link>
 
-              <Link href="/pricing" className="hover:text-gray-900">
+              <Link href="/pricing" className="hover:text-red-600">
                 Pricing
               </Link>
 
               <Link
-                href="/#book"
+                href="/#pay"
                 className="inline-flex items-center rounded-xl bg-gray-900 px-4 py-2 text-white hover:bg-gray-800 whitespace-nowrap"
               >
                 Book a Class
@@ -88,7 +88,7 @@ export default function RootLayout({
                 </Link>
 
                 <Link
-                  href="/#book"
+                  href="/#pay"
                   className="block px-4 py-3 text-sm font-semibold text-white bg-gray-900 hover:bg-gray-800"
                 >
                   Book a Class
