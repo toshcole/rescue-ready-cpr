@@ -29,10 +29,10 @@ export default function HomePage() {
       <section className="w-full bg-red-600 text-white py-16 px-6 text-center">
         <div className="flex justify-center mb-6">
           <img
-            src="/rescuereadylogo.png"
-            alt="Rescue Ready Logo"
-            className="h-32 md:h-40 object-contain bg-white p-2 rounded shadow-md"
-          />
+  src="/rescuereadylogo.png"
+  alt="Rescue Ready Logo"
+  className="h-32 md:h-40 object-contain"
+/>
         </div>
 
         <h1 className="text-4xl font-bold mb-4">Rescue Ready CPR & First Aid</h1>
