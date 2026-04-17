@@ -27,11 +27,11 @@ export default function HomePage() {
     <div className="min-h-screen bg-white text-gray-800 w-full">
       {/* HERO */}
       <section className="w-full bg-red-600 text-white py-16 px-6 text-center">
-       <div className="flex justify-center mb-8">
+      <div className="flex justify-center mb-8">
   <img
     src="/rescuereadylogo.png"
     alt="Rescue Ready Logo"
-    className="h-52 md:h-64 object-contain drop-shadow-2xl hover:scale-105 transition duration-300"
+    className="h-72 md:h-96 object-contain drop-shadow-2xl"
   />
 </div>
 
