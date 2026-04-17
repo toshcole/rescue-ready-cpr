@@ -17,13 +17,19 @@ export default function PricingPage() {
         <h1 className="text-4xl font-bold text-center mb-4">
           Rescue Ready CPR & First Aid Pricing
         </h1>
-        <p className="text-center text-gray-600 mb-12">Learn. Act. Save.</p>
+        <p className="text-center text-gray-600 mb-4">Learn. Act. Save.</p>
+        <p className="text-center text-gray-700 max-w-2xl mx-auto mb-12">
+          Direct payment is available for select individual courses. Group, custom,
+          and specialty training can be requested below.
+        </p>
 
         <section className="mb-12 rounded-2xl border bg-gray-50 p-6 shadow-sm">
           <h2 className="text-2xl font-semibold mb-6">CPR & BLS Courses</h2>
           <div className="grid gap-6 md:grid-cols-2">
             <div className="rounded-xl border bg-white p-5">
-              <h3 className="text-xl font-semibold mb-3">Heartsaver CPR/AED (Adult Only) – $60</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                Heartsaver CPR/AED (Adult Only) – $60
+              </h3>
               <a
                 href={links.adultOnly}
                 target="_blank"
@@ -35,7 +41,9 @@ export default function PricingPage() {
             </div>
 
             <div className="rounded-xl border bg-white p-5">
-              <h3 className="text-xl font-semibold mb-3">Heartsaver CPR/AED (Adult & Child) – $70</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                Heartsaver CPR/AED (Adult & Child) – $70
+              </h3>
               <a
                 href={links.adultChild}
                 target="_blank"
@@ -47,7 +55,9 @@ export default function PricingPage() {
             </div>
 
             <div className="rounded-xl border bg-white p-5">
-              <h3 className="text-xl font-semibold mb-3">Heartsaver CPR/AED (Adult, Child & Infant) – $80</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                Heartsaver CPR/AED (Adult, Child & Infant) – $80
+              </h3>
               <a
                 href={links.adultChildInfant}
                 target="_blank"
@@ -59,12 +69,14 @@ export default function PricingPage() {
             </div>
 
             <div className="rounded-xl border bg-white p-5">
-              <h3 className="text-xl font-semibold mb-3">BLS Initial Certification – $85</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                BLS Initial Certification – $85
+              </h3>
               <a
                 href={links.blsInitial}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-block bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition font-medium"
+                className="inline-block bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition font-medium"
               >
                 Pay Now
               </a>
@@ -76,21 +88,23 @@ export default function PricingPage() {
                 href={links.blsRenewal}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-block bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition font-medium"
+                className="inline-block bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition font-medium"
               >
                 Pay Now
               </a>
             </div>
 
             <div className="rounded-xl border bg-white p-5">
-              <h3 className="text-xl font-semibold mb-3">Group Discount (6+) – $5 off per person</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                Group Discount (6+) – $5 off per person
+              </h3>
               <a
                 href={bookingLink}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-block border border-red-600 text-red-600 px-6 py-3 rounded-lg hover:bg-red-50 transition font-medium"
               >
-                Request Group Booking
+                Request Group Training
               </a>
             </div>
           </div>
@@ -100,7 +114,9 @@ export default function PricingPage() {
           <h2 className="text-2xl font-semibold mb-6">First Aid Courses</h2>
           <div className="grid gap-6 md:grid-cols-2">
             <div className="rounded-xl border bg-white p-5">
-              <h3 className="text-xl font-semibold mb-3">Standard First Aid Certification – $65</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                Standard First Aid Certification – $65
+              </h3>
               <a
                 href={links.firstAid}
                 target="_blank"
@@ -112,26 +128,30 @@ export default function PricingPage() {
             </div>
 
             <div className="rounded-xl border bg-white p-5">
-              <h3 className="text-xl font-semibold mb-3">First Aid Add-On to CPR – $40</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                First Aid Add-On to CPR – $40
+              </h3>
               <a
                 href={bookingLink}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-block border border-red-600 text-red-600 px-6 py-3 rounded-lg hover:bg-red-50 transition font-medium"
               >
-                Request Booking
+                Request Training
               </a>
             </div>
 
             <div className="rounded-xl border bg-white p-5 md:col-span-2">
-              <h3 className="text-xl font-semibold mb-3">CPR + First Aid Combo – $110</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                CPR + First Aid Combo – $110
+              </h3>
               <a
                 href={bookingLink}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-block border border-red-600 text-red-600 px-6 py-3 rounded-lg hover:bg-red-50 transition font-medium"
               >
-                Request Booking
+                Request Training
               </a>
             </div>
           </div>
@@ -148,19 +168,21 @@ export default function PricingPage() {
                 rel="noreferrer"
                 className="inline-block border border-red-600 text-red-600 px-6 py-3 rounded-lg hover:bg-red-50 transition font-medium"
               >
-                Request Booking
+                Request Training
               </a>
             </div>
 
             <div className="rounded-xl border bg-white p-5">
-              <h3 className="text-xl font-semibold mb-3">Group (6+) – $65 per person</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                Group (6+) – $65 per person
+              </h3>
               <a
                 href={bookingLink}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-block border border-red-600 text-red-600 px-6 py-3 rounded-lg hover:bg-red-50 transition font-medium"
               >
-                Request Group Booking
+                Request Group Training
               </a>
             </div>
           </div>
@@ -177,7 +199,7 @@ export default function PricingPage() {
                 rel="noreferrer"
                 className="inline-block border border-red-600 text-red-600 px-6 py-3 rounded-lg hover:bg-red-50 transition font-medium"
               >
-                Request Booking
+                Request Training
               </a>
             </div>
 
@@ -189,12 +211,14 @@ export default function PricingPage() {
                 rel="noreferrer"
                 className="inline-block border border-red-600 text-red-600 px-6 py-3 rounded-lg hover:bg-red-50 transition font-medium"
               >
-                Request Booking
+                Request Training
               </a>
             </div>
 
             <div className="rounded-xl border bg-white p-5 md:col-span-2">
-              <h3 className="text-xl font-semibold mb-3">Corporate / School Training – Custom Quote</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                Corporate / School Training – Custom Quote
+              </h3>
               <a
                 href={bookingLink}
                 target="_blank"
@@ -208,10 +232,14 @@ export default function PricingPage() {
         </section>
 
         <section className="mb-12 rounded-2xl border bg-gray-50 p-6 shadow-sm">
-          <h2 className="text-2xl font-semibold mb-6">Bloodborne & Airborne Pathogens</h2>
+          <h2 className="text-2xl font-semibold mb-6">
+            Bloodborne & Airborne Pathogens
+          </h2>
           <div className="grid gap-6 md:grid-cols-2">
             <div className="rounded-xl border bg-white p-5">
-              <h3 className="text-xl font-semibold mb-3">Individual Training – $35</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                Individual Training – $35
+              </h3>
               <a
                 href={links.bloodborne}
                 target="_blank"
@@ -223,14 +251,16 @@ export default function PricingPage() {
             </div>
 
             <div className="rounded-xl border bg-white p-5">
-              <h3 className="text-xl font-semibold mb-3">Group / Workplace Training – Available Upon Request</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                Group / Workplace Training – Available Upon Request
+              </h3>
               <a
                 href={bookingLink}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-block border border-red-600 text-red-600 px-6 py-3 rounded-lg hover:bg-red-50 transition font-medium"
               >
-                Request Booking
+                Request Training
               </a>
             </div>
           </div>
@@ -247,24 +277,28 @@ export default function PricingPage() {
                 rel="noreferrer"
                 className="inline-block border border-red-600 text-red-600 px-6 py-3 rounded-lg hover:bg-red-50 transition font-medium"
               >
-                Request Booking
+                Request Training
               </a>
             </div>
 
             <div className="rounded-xl border bg-white p-5">
-              <h3 className="text-xl font-semibold mb-3">Family Package (Up to 4) – $180</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                Family Package (Up to 4) – $180
+              </h3>
               <a
                 href={bookingLink}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-block border border-red-600 text-red-600 px-6 py-3 rounded-lg hover:bg-red-50 transition font-medium"
               >
-                Request Booking
+                Request Training
               </a>
             </div>
 
             <div className="rounded-xl border bg-white p-5 md:col-span-2">
-              <h3 className="text-xl font-semibold mb-3">Community / Church Workshop – Custom Quote</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                Community / Church Workshop – Custom Quote
+              </h3>
               <a
                 href={bookingLink}
                 target="_blank"
@@ -281,7 +315,9 @@ export default function PricingPage() {
           <h2 className="text-2xl font-semibold mb-6">On-Site Corporate Training</h2>
           <div className="grid gap-6 md:grid-cols-3">
             <div className="rounded-xl border bg-white p-5">
-              <h3 className="text-xl font-semibold mb-3">1–10 Participants – Starting at $700</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                1–10 Participants – Starting at $700
+              </h3>
               <a
                 href={bookingLink}
                 target="_blank"
@@ -293,7 +329,9 @@ export default function PricingPage() {
             </div>
 
             <div className="rounded-xl border bg-white p-5">
-              <h3 className="text-xl font-semibold mb-3">11–20 Participants – Starting at $1,200</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                11–20 Participants – Starting at $1,200
+              </h3>
               <a
                 href={bookingLink}
                 target="_blank"
@@ -305,7 +343,9 @@ export default function PricingPage() {
             </div>
 
             <div className="rounded-xl border bg-white p-5">
-              <h3 className="text-xl font-semibold mb-3">20+ Participants – Custom Pricing</h3>
+              <h3 className="text-xl font-semibold mb-3">
+                20+ Participants – Custom Pricing
+              </h3>
               <a
                 href={bookingLink}
                 target="_blank"
@@ -318,7 +358,8 @@ export default function PricingPage() {
           </div>
 
           <p className="mt-4 text-gray-700">
-            Includes instruction, equipment, certification cards, and digital roster tracking.
+            Includes instruction, equipment, certification cards, and digital roster
+            tracking.
           </p>
         </section>
 
@@ -342,14 +383,14 @@ export default function PricingPage() {
             rel="noreferrer"
             className="inline-block bg-red-600 text-white px-8 py-3 rounded-lg hover:bg-red-700 transition font-medium"
           >
-            Book a Class
+            Request Training
           </a>
 
           <a
             href={links.blsInitial}
             target="_blank"
             rel="noreferrer"
-            className="inline-block bg-black text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition font-medium"
+            className="inline-block bg-red-600 text-white px-8 py-3 rounded-lg hover:bg-red-700 transition font-medium"
           >
             Pay for BLS Class
           </a>
