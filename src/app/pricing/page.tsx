@@ -9,6 +9,7 @@ export default function PricingPage() {
     adultChild: "https://buy.stripe.com/cNieVddVscMS1JPfZ5cIE04",
     adultChildInfant: "https://buy.stripe.com/bJeaEX8B85kqgEJ28fcIE05",
     firstAid: "https://buy.stripe.com/fZu8wP4kS7sy0FLeV1cIE06",
+    customPayment: "https://buy.stripe.com/bJe8wP6t028e0FL9AHcIE07",
   };
 
   return (
@@ -373,6 +374,23 @@ export default function PricingPage() {
             className="inline-block bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition font-medium"
           >
             Request Renewal Booking
+          </a>
+        </section>
+
+        {/* NEW SECTION: Custom Class Payment */}
+        <section className="mb-12 rounded-2xl border bg-gray-50 p-6 shadow-sm">
+          <h2 className="text-2xl font-semibold mb-4">Custom Class Payment</h2>
+          <p className="text-gray-700 mb-4">
+            For negotiated or custom training amounts. Enter the exact dollar amount 
+            agreed upon with Boris.
+          </p>
+          <a
+            href={links.customPayment}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-block bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition font-medium"
+          >
+            Pay Custom Amount
           </a>
         </section>
 
