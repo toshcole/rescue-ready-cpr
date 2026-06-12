@@ -377,12 +377,11 @@ export default function PricingPage() {
           </a>
         </section>
 
-        {/* NEW SECTION: Custom Class Payment */}
+        {/* CUSTOM CLASS PAYMENT SECTION */}
         <section className="mb-12 rounded-2xl border bg-gray-50 p-6 shadow-sm">
           <h2 className="text-2xl font-semibold mb-4">Custom Class Payment</h2>
           <p className="text-gray-700 mb-4">
-            For negotiated or custom training amounts. Enter the exact dollar amount 
-            agreed upon with Boris.
+            For negotiated or custom training amounts agreed with Boris.
           </p>
           <a
             href={links.customPayment}
@@ -392,6 +391,9 @@ export default function PricingPage() {
           >
             Pay Custom Amount
           </a>
+          <p className="text-sm text-gray-500 mt-2">
+            This link charges $25 per quantity of 1. To pay your quoted amount, enter the quantity. Example: $200 = quantity 8.
+          </p>
         </section>
 
         <div className="text-center mt-10 flex justify-center gap-4 flex-wrap">
