@@ -381,7 +381,7 @@ export default function PricingPage() {
         <section className="mb-12 rounded-2xl border bg-gray-50 p-6 shadow-sm">
           <h2 className="text-2xl font-semibold mb-4">Custom Class Payment</h2>
           <p className="text-gray-700 mb-4">
-            For negotiated or custom training amounts agreed with Boris.
+            For negotiated or custom training amounts agreed with Rescue Ready.
           </p>
           <a
             href={links.customPayment}
